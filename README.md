@@ -1,6 +1,9 @@
 # localStorage-blog
 A personal blog interface that uses the "window: localStorage" Web API property.
 
+## Deployed Web App
+https://cmakousky.github.io/localStorage-blog/
+
 ## User Story
 
 ```md
