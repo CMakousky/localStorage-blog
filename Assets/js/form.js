@@ -26,7 +26,7 @@ const saveBlogContent = function(usernameInput, titleInput, contentInput, errorM
     console.log(blogContent);
     
     //Redirect to Blog page
-    redirectPage('file:./blog.html');
+    redirectPage('./blog.html');
   };
 };
 
