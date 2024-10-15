@@ -2,14 +2,14 @@
 const toggleButton = document.querySelector("#toggle");
 const bodyStyle = document.querySelector("body");
 
-//Initialize blogTheme object
+//Initialize `blogTheme` object
 const blogTheme = {theme:"light"};
 
-//Check for savedBlogTheme object in local storage
+//Check for an existing `blogTheme` object in local storage when the page loads
 const savedBlogTheme = JSON.parse(localStorage.getItem('blogTheme'));
 console.log(savedBlogTheme);
 
-//Apply savedBlogTheme if it exists, otherwise default to light blogTheme
+//Apply `savedBlogTheme` if it exists, otherwise default to light `blogTheme`
 if(savedBlogTheme !== null){
   blogTheme.theme=savedBlogTheme.theme;
   bodyStyle.setAttribute('class', `${blogTheme.theme}`);
@@ -26,12 +26,14 @@ const themeChange = function(blogTheme, bodyStyle){
     blogTheme.theme="light";
   };
 
+  //Save the new `blogTheme` to `localStorage`
   localStorage.setItem('blogTheme', JSON.stringify(blogTheme));
   
+  //Return the new value of `blogTheme`
   return blogTheme;
 };
 
-//Add an event listener to the toggleButton to call the themeChange function
+//Add an event listener to the `toggleButton` to call the `themeChange` function
 toggleButton.addEventListener('click', function(){
   themeChange(blogTheme, bodyStyle);
 });
