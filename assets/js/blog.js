@@ -35,27 +35,29 @@ const buildElement = function(mainElement, blogContent, blogIndex){
 // TODO: Create a function that handles the case where there are no blog posts to display
 
 const noBlogPosts = function(mainElement){
-    const noContent = {
+    const noContent = [{
         username: "ServerMessage",
         title: "There are no blog posts to display!",
         content: "No Blog posts yet..."
-    };
+    }];
 
-    const newArticle=document.createElement("article");
+    buildElement(mainElement, noContent, 0);
 
-    const newTitle=document.createElement("h2");
-    newTitle.textContent=noContent.title;
+    // const newArticle=document.createElement("article");
 
-    const newContent=document.createElement("blockquote");
-    newContent.textContent=noContent.content;
+    // const newTitle=document.createElement("h2");
+    // newTitle.textContent=noContent.title;
 
-    const newAuthor=document.createElement("p");
-    newAuthor.textContent=noContent.username;
+    // const newContent=document.createElement("blockquote");
+    // newContent.textContent=noContent.content;
 
-    mainElement.appendChild(newArticle);
-    newArticle.appendChild(newTitle);
-    newArticle.appendChild(newContent);
-    newArticle.appendChild(newAuthor);
+    // const newAuthor=document.createElement("p");
+    // newAuthor.textContent=noContent.username;
+
+    // mainElement.appendChild(newArticle);
+    // newArticle.appendChild(newTitle);
+    // newArticle.appendChild(newContent);
+    // newArticle.appendChild(newAuthor);
 };
 
 // TODO: Create a function called `renderBlogList` that renders the list of blog posts if they exist. If not, call the no posts function.
