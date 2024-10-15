@@ -17,7 +17,7 @@ const saveBlogContent = function(usernameInput, titleInput, contentInput, errorM
   }];
 
   //Display error message if form is missing data
-  if (blogContent[0].username === '' || blogContent[0].title === '' || blogContent[0].content === '') {errorMessage.hidden=false}
+  if (blogContent[0].username === '' || blogContent[0].title === '' || blogContent[0].content === '') {errorMessage.hidden=false;}
   else {
     //Use the `storeLocalStorage` function to save the new blog data
     storeLocalStorage(`blogContent`, blogContent);
